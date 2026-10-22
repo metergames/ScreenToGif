@@ -186,5 +186,7 @@ public partial class ApplicationSettings : Page
 
         if (App.NotifyIcon != null)
             App.NotifyIcon.Visibility = UserSettings.All.ShowNotificationIcon ? Visibility.Visible : Visibility.Collapsed;
+
+        TaskbarHelper.QueueRepaint(Window.GetWindow(this));
     }
 }
