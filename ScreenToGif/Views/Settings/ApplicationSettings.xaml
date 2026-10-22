@@ -216,6 +216,8 @@
                 <StackPanel>
                     <c:ExtendedCheckBox Text="{DynamicResource S.Options.App.Tray.Show}" Margin="15,3,5,3" IsChecked="{Binding Path=ShowNotificationIcon, Mode=TwoWay}"
                                         CheckedChanged="NotificationIconCheckBox_CheckedChanged"/>
+                    <c:ExtendedCheckBox Text="{DynamicResource S.Options.App.Tray.HideTaskbarIcon}" Info="{DynamicResource S.Options.App.Tray.HideTaskbarIcon.Info}"
+                                        Margin="30,3,5,3" IsChecked="{Binding Path=ShowInTaskbar, Mode=TwoWay, Converter={StaticResource InvertedBool}}" Checked="StartCheckBox_Checked"/>
                     <c:ExtendedCheckBox Text="{DynamicResource S.Options.App.Tray.LeaveOpen}" Margin="30,3,5,3" IsChecked="{Binding Path=KeepOpen, Mode=TwoWay}"
                                         Visibility="{Binding ShowNotificationIcon, Converter={StaticResource Bool2Visibility}}"/>
 
